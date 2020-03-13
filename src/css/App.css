@@ -1,0 +1,80 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+}
+
+#searchBar{
+  margin-bottom: 15px;
+  display: flex;
+  width: 100%;
+  position: sticky; 
+  background-color: #ddd;
+  top: 0;
+}
+
+#searchBox{
+  width: 80%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+}
+
+#searchButton{
+  width: 20%;
+  font-size: 16px;
+  padding: 12px 0px 12px 0px;
+  border: 1px solid #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  max-width: 100%;
+  cursor: pointer;
+}
+
+#loadButton{
+  margin: auto;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.loading{
+  -webkit-animation: loadingAnimation 1.5s ease 0s infinite;
+  animation: loadingAnimation 1.5s ease 0s infinite;
+}
+@-webkit-keyframes loadingAnimation { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); }  }
+@keyframes loadingAnimation { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+input[type=submit]{
+  display: none;
+}
+
+#photos {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.photo {
+  padding: 10px;
+  overflow: hidden;
+  height: auto;
+  align-self: center;
+  width: 25%;
+}
+
+@media screen and (max-width: 992px) {
+  .photo {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .photo {
+    width: 100%;
+  }
+}
